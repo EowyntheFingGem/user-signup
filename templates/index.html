@@ -1,0 +1,43 @@
+{% extends 'homepage.html' %}
+
+{% block content %}
+<body>
+
+    <div class="container wow fadeIn" data-wow-duration="3s" data-wow-delay="0.25s">
+
+        <div class="form-wrapper">
+
+            <i class="fa fa-user-o" aria-hidden="true"></i>
+
+            <h1>Create New Account</h1>
+
+            <form action="/signup" method="POST">
+
+                <input class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0.40s" type="text" name="username" value="{{username}}" placeholder="Username" required />
+                <p class="error">{{username_error}}</p>
+
+                <input class="wow fadeIn" data-wow-duration="2.5s" data-wow-delay="0.60s" type="password" name="password" value="{{password}}" placeholder="Password" required />
+                <p class="error">{{password_error}}</p>
+
+                <input class="wow fadeIn" data-wow-duration="3s" data-wow-delay="0.80s" type="password" name="verify" value="{{verify}}" placeholder="Verify Password" required />
+                <p class="error">{{verify_error}}</p>
+
+                <input class="wow fadeIn" data-wow-duration="3.5s" data-wow-delay="1s" type="text" name="email" value="{{email}}" placeholder="Email (Optional)" />
+                <p class="error">{{email_error}}</p>
+
+                <input type="submit" name="submit" value="Sign Up">
+
+            </form>
+
+            <p>Already have an account? <a href="/">Sign In</a></p>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+    </div>
+
+</body>
+
+{% endblock %}
